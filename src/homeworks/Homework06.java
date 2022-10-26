@@ -48,7 +48,7 @@ public class Homework06 {
         System.out.println("\n---------TASK-5----------\n");
 
         String[] cartoons = {"Scooby Doo", "Snoopy", "Blue", "Pluto", "Dino", "Sparky"};
-        System.out.println(Arrays.toString(cartoons));
+
         boolean hasPluto = false;
         for (String cartoon : cartoons) {
             if (cartoon.equals("Pluto")) {
@@ -56,6 +56,7 @@ public class Homework06 {
                 break;
             }
         }
+        System.out.println(Arrays.toString(cartoons));
         System.out.println(hasPluto);
 
         System.out.println("\n---------TASK-6----------\n");
@@ -73,10 +74,11 @@ public class Homework06 {
 
         System.out.println("\n---------TASK-7----------\n");
 
-        double[] n = {10.5, 20.75, 70.0, 80.0, 15.75};
+        double[] n = {10.5, 20.75, 70, 80, 15.75};
         System.out.println(Arrays.toString(n));
         for (double element : n) {
-            System.out.println(element);
+            if(element % (int)element == 0) System.out.println((int)element);
+            else System.out.println(element);
         }
 
         System.out.println("\n---------TASK-8----------\n");
@@ -112,6 +114,16 @@ public class Homework06 {
             int startsWithBP = 0;
             int bookAndPenElements = 0;
 
+            for (String s : objects){
+                if (Character.isUpperCase(s.charAt(0))) upperCase++;
+                else lowerCase++;
+
+                if (s.toLowerCase().charAt(0) == 'b' || s.toLowerCase().charAt(0) == 'p')
+                    startsWithBP++;
+                if (s.toLowerCase().contains("book") || s.toLowerCase().contains("pen"))
+                    bookAndPenElements++;
+            }
+
             System.out.println("Elements starts with uppercase = " + upperCase);
             System.out.println("Elements starts with lowercase = " + lowerCase);
             System.out.println("Elements starting with B or P = " + startsWithBP);
@@ -128,33 +140,25 @@ public class Homework06 {
 
             for (int element : elements) {
                 if (element > 10) countMoreThan10++;
+                else if (element < 10) countLessThan10++;
+                else countIs10++;
             }
             System.out.println("Elements that are more than 10 = " + countMoreThan10);
-            for (int element : elements) {
-                if (element < 10) countLessThan10++;
-            }
             System.out.println("Elements that are less than 10 = " + countLessThan10);
-            for (int element : elements) {
-                if (element == 10) countIs10++;
-            }
             System.out.println("Elements that are 10 = " + countIs10);
 
             System.out.println("\n---------TASK-11----------\n");
 
             int[] first = {5, 8, 13, 1, 2};
             int[] second = {9, 3, 67, 1, 0};
-            System.out.println(Arrays.toString(first));
-            System.out.println(Arrays.toString(second));
+            int[] third = new int [5];
 
-            int new1 = Math.max(first[0], second[0]);
-            int new2 = Math.max(first[1], second[1]);
-            int new3 = Math.max(first[2], second[2]);
-            int new4 = Math.max(first[3], second[3]);
-            int new5 = Math.max(first[4], second[4]);
-
-            int[] third = {new1, new2, new3, new4, new5};
-
-            System.out.println(Arrays.toString(third));
+        for (int i = 0; i < third.length; i++) {
+            third[i] = Math.max(first[i], second[i]);
+        }
+        System.out.println("1st array is =" + Arrays.toString(first));
+        System.out.println("1st array is = " + Arrays.toString(second));
+        System.out.println("1st array is = " + Arrays.toString(third));
 
         }
     }
