@@ -57,9 +57,9 @@ public class _13_SecondGreatest_SecondSmallest {
                 }
             }
 
-            System.out.println("max = " + findMax(numbers));
+
             System.out.println("second max = " + secondMax );
-            System.out.println("min = " + findMin(numbers));
+
             System.out.println("second min = " + secondMin );
         }
     }

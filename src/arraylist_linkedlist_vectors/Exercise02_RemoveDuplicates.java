@@ -2,9 +2,8 @@ package arraylist_linkedlist_vectors;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 
-public class Exercise02_RemoveDublicates {
+public class Exercise02_RemoveDuplicates {
 
     public static void main(String[] args) {
 
