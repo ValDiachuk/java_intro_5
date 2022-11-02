@@ -113,6 +113,8 @@ public class Homework07 {
 
         System.out.println("Elements starts with uppercase = " + startLower);
         System.out.println("Elements starts with lowercase = " + startUpper);
+        System.out.println("Elements having P or p = " + containP);
+        System.out.println("Elements starting or ending with P or p = " + startOrEndsWithP);
 
 
         System.out.println("\n---------TASK-10----------\n");
