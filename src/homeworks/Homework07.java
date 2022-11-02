@@ -83,11 +83,13 @@ public class Homework07 {
         Collections.sort(objects);
         System.out.println(objects);
         int countM = 0;
-        int countNotHave = 0;
+        int countHaveAAndE = 0;
         for (String object : objects) {
             if (object.toLowerCase().startsWith("m")) countM++;
+            if(object.contains("A") || object.contains("a") || object.contains("E") || object.contains("e")) countHaveAAndE++;
         }
         System.out.println(countM);
+        System.out.println(objects.size() - countHaveAAndE );
 
 
         System.out.println("\n---------TASK-9----------\n");
@@ -100,12 +102,17 @@ public class Homework07 {
         ArrayList<String> kitchenObjects = new ArrayList<>(Arrays.asList("Plate", "spoon", "fork", "Knife", "cup", "Mixer"));
         System.out.println(kitchenObjects);
 
-        for (int i = 0; i < kitchenObjects.size(); i++) {
+        for (String kitchenObject : kitchenObjects) {
 
+            if (Character.isUpperCase(kitchenObject.charAt(0))) startUpper++;
+            else startLower++;
+
+            if (kitchenObject.contains("P") || kitchenObject.contains("p")) containP++;
+            if (kitchenObject.startsWith("P") || kitchenObject.endsWith("p")) startOrEndsWithP++;
         }
 
-        System.out.println(startLower);
-        System.out.println(startUpper);
+        System.out.println("Elements starts with uppercase = " + startLower);
+        System.out.println("Elements starts with lowercase = " + startUpper);
 
 
         System.out.println("\n---------TASK-10----------\n");
