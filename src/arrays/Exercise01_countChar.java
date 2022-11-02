@@ -23,8 +23,6 @@ public class Exercise01_countChar {
 
          */
 
-
-
         }
 
     }

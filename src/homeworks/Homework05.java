@@ -99,23 +99,21 @@ public class Homework05 {
         if (counter == 1) System.out.println("This number is already more than 100");
         else System.out.println("Sum of the entered numbers is at least 100");
 
-
         System.out.println("\n==========TASK9==========\n");
 
-        int prevNum, nextNum = 1, numCurrent = 0;
+        int prevNum, nextNum = 1, sumF = 0;
         answer = "";
 
         num =scanner.nextInt();
 
         for (int i = 0; i < num; i++) {
-            answer += numCurrent + " - ";
+            answer += sumF + " - ";
 
-            prevNum = numCurrent;
-            numCurrent = nextNum;
-            nextNum = prevNum + numCurrent;
+            prevNum = sumF;
+            sumF = nextNum;
+            nextNum = prevNum + sumF;
         }
         System.out.println(answer.substring(0, answer.length()-3));
-
 
         System.out.println("\n==========TASK10==========\n");
         scanner.nextLine();

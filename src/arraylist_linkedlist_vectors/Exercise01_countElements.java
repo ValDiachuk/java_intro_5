@@ -90,6 +90,7 @@ EXPECTED:
             if(colors.get(i).toLowerCase().contains("o")) countO++;
         }
 
+
         System.out.println(countO);
 
     }
