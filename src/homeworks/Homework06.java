@@ -118,6 +118,7 @@ public class Homework06 {
                 if (Character.isUpperCase(s.charAt(0))) upperCase++;
                 else lowerCase++;
 
+
                 if (s.toLowerCase().charAt(0) == 'b' || s.toLowerCase().charAt(0) == 'p')
                     startsWithBP++;
                 if (s.toLowerCase().contains("book") || s.toLowerCase().contains("pen"))
@@ -162,7 +163,6 @@ public class Homework06 {
 
         }
     }
-
 
 
 
