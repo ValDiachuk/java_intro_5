@@ -32,6 +32,7 @@ public class MatcherClass {
         pattern = Pattern.compile("[A-Za-z]{1,}");
 
         System.out.println("Please print out a sentence: ");
+
         String sentence = scanner.nextLine();
 
         matcher = pattern.matcher(sentence);
