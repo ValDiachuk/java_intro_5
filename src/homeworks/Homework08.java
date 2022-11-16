@@ -2,6 +2,7 @@ package homeworks;
 
 import utilities.ScannerHelper;
 
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,9 +17,6 @@ public class Homework08 {
          return counter;
 
         }
-
-
-
     }
 
 
