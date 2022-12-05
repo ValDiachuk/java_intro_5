@@ -20,7 +20,7 @@ public class Project08 {
 
         System.out.println("\n**********Task-3**********\n");
 
-        // String str = "Hello";
+         String str = "Hello";
         // String str = "abc abc d";
         //String str = "abab";
         System.out.println(findFirstUniqueCharacter(str));
