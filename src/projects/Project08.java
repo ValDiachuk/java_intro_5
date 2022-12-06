@@ -14,9 +14,9 @@ public class Project08 {
 
         System.out.println("\n**********Task-2**********\n");
 
-        int[] numbers = {2};
-        //int[] numbers = {5, 3, -1, 3, 5, 7, -1};
-        System.out.println(findSingleNumber(numbers));
+        int[] arr = {2};
+        //int[] arr = {5, 3, -1, 3, 5, 7, -1};
+        System.out.println(findSingleNumber(arr));
 
         System.out.println("\n**********Task-3**********\n");
 
@@ -36,32 +36,28 @@ public class Project08 {
     //--------- task-1 ---------//
 
     public static int findClosestDistance(int[] array) {
-
-        int minDistance = Integer.MAX_VALUE;
-        if (array.length < 1) {
-            for (int i = 0; i < array.length; i++) {
-                for (int j = i + 1; j < array.length - 1; j++) {
-                    if (Math.abs(array[i] - array[j]) < minDistance) minDistance = Math.abs(array[i] - array[j]);
-                }
-            }
-            return minDistance;
+        if (array.length < 2) return -1;
+        Arrays.sort(array); // 4, 7, 8, 15
+        int smallestDiff = Integer.MAX_VALUE;
+        for (int i = 0; i < array.length - 1; i++) {
+            int diff = Math.abs(array[i] - array[i + 1]);
+            if (diff < smallestDiff) smallestDiff = diff;
         }
-        return -1;
+        return smallestDiff;
     }
 
     //--------- task-2 ---------//
 
-    public static int findSingleNumber(int[] numbers) {
-        for (int i = 0; i < numbers.length; i++){
-            int occur = 0;
-        for (int j = 0; i < numbers.length-1; i++) {
-            if (numbers[i] == numbers[j]) {
-                occur++;
-            }
+    public static int findSingleNumber(int[] arr) {
+        Arrays.sort(arr);
+        // compare the next number, if it's the same, then we can skip that num
+        // if its not the same, return it
+        if (arr.length == 1) return arr[0];
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] != arr[i + 1]) return arr[i];
+            else i++;
         }
-        if(occur == 1) return numbers [i];
-     }
-       return -1;
+        return arr[arr.length - 1];
  }
 
     //--------- task-3 ---------//
@@ -92,4 +88,17 @@ public class Project08 {
         }
      return result;
    }
+
+   /*
+   public static int findMissingNumber(int[] arr) {
+    Arrays.sort(arr);
+    // you compare the next value and see if it is +1 of the current value
+    // if it is, then continue, if not, return that missing next value
+    for (int i = 0; i < arr.length -1; i++) {
+        int expectedValue = arr[i] + 1, nextValue = arr[i + 1];
+        if (nextValue != expectedValue) return expectedValue;
+    }
+    return 0;
+}
+    */
 }
