@@ -124,21 +124,13 @@ public class Homework11 {
     }
     //-----------------------------------------Task-8-----------------------------------------//
     public static int countPrimes(int[] nums) {
-        int count = 0;
-
+        int countNonPrime = 0;
         for (int num : nums){
-           if (num == 2 || num == 3) count++;
-           else if (num > 3) {
-               boolean isPrime = true;
-               for (int i = 2; i < num; i++) {
-                   if (num % i == 0) {
-                       isPrime = false;
-                   }
-               }
-               if (isPrime) count++;
+            for(int i = 2; i < num; i++){
+                if(num % i == 0) countNonPrime++;
            }
         }
-        return count;
+        return nums.length - countNonPrime;
     }
 }
 
