@@ -41,15 +41,13 @@ public class Homework12 {
 
         System.out.println("\n---------TASK-5----------\n");
 
-        int a = 1;
-        int b = 1;
-        int c = 1;
+        int a = 1; int b = 1; int c = 1;
         System.out.println(middleInt(a, b, c));
         a = 1; b = 2; c = 2;
         System.out.println(middleInt(a, b, c));
         a = 5; b = 5; c = 8;
         System.out.println(middleInt(a, b, c));
-        a = 5;b = 3; c = 5;
+        a = 5;b = 3;c = 5;
         System.out.println(middleInt(a, b, c));
         a = -1; b = 25; c = 10;
         System.out.println(middleInt(a, b, c));
@@ -70,20 +68,25 @@ public class Homework12 {
 
         System.out.println(Arrays.toString(arrFactorial(numbers)));
 
+        System.out.println("\n---------TASK-8----------\n");
 
+        //String str8 = "";
+        //String str8 = "abc123$#%";
+        String str8 = "12ab$%3c%";
+
+        System.out.println(Arrays.toString(categorizeCharacters(str8)));
     }
-
     //-----------------------------------------Task-1-----------------------------------------//
     public static String noDigit(String str) {
 
         return str.replaceAll("\\d", "");
     }
     //-----------------------------------------Task-2-----------------------------------------//
-
     public static String noVowel(String str2) {
         return str2.replaceAll("[aeiouAEIOU]", "");
 
     }
+
     //-----------------------------------------Task-3-----------------------------------------//
     public static int sumOfDigits(String str3) {
 
@@ -104,7 +107,6 @@ public class Homework12 {
     }
 
     //-----------------------------------------Task-5-----------------------------------------//
-
     public static int middleInt(int a, int b, int c) {
         int[] numbers5 = {a, b, c};
         Arrays.sort(numbers5);
@@ -118,37 +120,26 @@ public class Homework12 {
         }
         return arr;
     }
-
     //-----------------------------------------Task-7-----------------------------------------//
-
     public static int[] arrFactorial(int[] numbers) {
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == 0 || numbers[i] == 1) numbers[i] = 1;
-            else {numbers[i] *= i;
 
+            if (numbers[i] == 0 || numbers[i] == 1) numbers[i] = 1;
+            for (int j = 2; j < numbers[i]; j++) {
+                numbers[i] *= j;
             }
         }
         return numbers;
     }
-
     //-----------------------------------------Task-8-----------------------------------------//
-
+    public static String[] categorizeCharacters(String str8) {
+        String[] arr = {"", "", ""};
+        str8 = str8.trim();
+        for (int i = 0; i < str8.length(); i++) {
+            if (Character.isLetter(str8.charAt(i))) arr[0] += str8.charAt(i);
+            else if (Character.isDigit(str8.charAt(i))) arr[1] += str8.charAt(i);
+            else if (!Character.isWhitespace(str8.charAt(i))) arr[2] += str8.charAt(i);
+        }
+        return arr;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
