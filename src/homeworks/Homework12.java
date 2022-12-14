@@ -41,15 +41,25 @@ public class Homework12 {
 
         System.out.println("\n---------TASK-5----------\n");
 
-        int a = 1; int b = 1; int c = 1;
+        int a = 1;
+        int b = 1;
+        int c = 1;
         System.out.println(middleInt(a, b, c));
-        a = 1; b = 2; c = 2;
+        a = 1;
+        b = 2;
+        c = 2;
         System.out.println(middleInt(a, b, c));
-        a = 5; b = 5; c = 8;
+        a = 5;
+        b = 5;
+        c = 8;
         System.out.println(middleInt(a, b, c));
-        a = 5;b = 3;c = 5;
+        a = 5;
+        b = 3;
+        c = 5;
         System.out.println(middleInt(a, b, c));
-        a = -1; b = 25; c = 10;
+        a = -1;
+        b = 25;
+        c = 10;
         System.out.println(middleInt(a, b, c));
 
         System.out.println("\n---------TASK-6----------\n");
@@ -76,11 +86,13 @@ public class Homework12 {
 
         System.out.println(Arrays.toString(categorizeCharacters(str8)));
     }
+
     //-----------------------------------------Task-1-----------------------------------------//
     public static String noDigit(String str) {
 
         return str.replaceAll("\\d", "");
     }
+
     //-----------------------------------------Task-2-----------------------------------------//
     public static String noVowel(String str2) {
         return str2.replaceAll("[aeiouAEIOU]", "");
@@ -98,6 +110,7 @@ public class Homework12 {
         }
         return sum;
     }
+
     //-----------------------------------------Task-4-----------------------------------------//
     public static boolean hasUpperCase(String str4) {
         for (int i = 0; i < str4.length(); i++) {
@@ -120,17 +133,19 @@ public class Homework12 {
         }
         return arr;
     }
+
     //-----------------------------------------Task-7-----------------------------------------//
     public static int[] arrFactorial(int[] numbers) {
         for (int i = 0; i < numbers.length; i++) {
-
-            if (numbers[i] == 0 || numbers[i] == 1) numbers[i] = 1;
-            for (int j = 2; j < numbers[i]; j++) {
-                numbers[i] *= j;
+            int factorial = 1;
+            for (int j = 1; j <= numbers[i]; j++) {
+                factorial *= j;
             }
+            numbers[i] = factorial;
         }
         return numbers;
     }
+
     //-----------------------------------------Task-8-----------------------------------------//
     public static String[] categorizeCharacters(String str8) {
         String[] arr = {"", "", ""};
