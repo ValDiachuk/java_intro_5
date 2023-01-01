@@ -160,12 +160,3 @@ public class Homework13 {
         return result;
     }
 }
-
-
-
-
-
-
-
-
-
