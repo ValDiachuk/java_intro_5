@@ -43,7 +43,8 @@ public class _02_Sets {
         treeSet.add(null); //NullPointerException
         treeSet.add(null); //NullPointerException
 
-        System.out.println(treeSet); // [0, 5, 10]
+        System.out.println(treeSet); // [0, 5, 10]]|
+
 
 
 

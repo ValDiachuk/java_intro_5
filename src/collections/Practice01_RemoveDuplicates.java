@@ -35,7 +35,7 @@ public class Practice01_RemoveDuplicates {
 
         LinkedHashSet <Integer> hs = new LinkedHashSet<>(Arrays.asList(arr));
 
-        // Integer array -> Integer List -> LinkedHashSet ->
+        // Integer array -> Integer List -> LinkedHashSet -> Object array -> Integer array
         return hs.toArray(new Integer[0]);
     }
 }

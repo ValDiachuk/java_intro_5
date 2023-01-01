@@ -5,7 +5,7 @@ import java.util.*;
 public class Practice06_CalculateCharacters {
     public static void main(String[] args) {
         String str = "banana";
-        LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
+        LinkedHashMap <Character, Integer> map = new LinkedHashMap<>();
 
         for (char c : str.toCharArray()) {
             if(!map.containsKey(c)) map.put(c, 1);

@@ -103,11 +103,10 @@ public class Homework12 {
     public static int sumOfDigits(String str3) {
 
         int sum = 0;
-        for (char ch : str3.toCharArray()) {
-            if (Character.isDigit(ch)) {
-                sum += (ch - '0');
-            }
+        for (int i = 0; i < str3.length(); i++) {
+            sum += Character.getNumericValue(str3.charAt(i));
         }
+
         return sum;
     }
 

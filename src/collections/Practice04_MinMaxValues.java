@@ -129,4 +129,12 @@ public class Practice04_MinMaxValues {
 
         return set.first();
     }
+
+    public static int [] add3 (int [] num){
+        for (int i = 0; i < num.length; i++) {
+            num[i] = num[i]+3;
+
+        }
+        return  num;
+    }
 }
