@@ -41,12 +41,12 @@ public class Homework13 {
         System.out.println(containsValue(new String[]{"abc", "def", "123", "Java", "Hello"}, "123"));
 
         System.out.println("----------------------------------------*Task-5*----------------------------------------");
-        String str = "Hello";
-        System.out.println(reverseSentence(str));
-        str = "Java is fun";
-        System.out.println(reverseSentence(str));
-        str = "This is a sentence";
-        System.out.println(reverseSentence(str));
+        String str5 = "Hello";
+        System.out.println(reverseSentence(str5));
+        str5 = "Java is fun";
+        System.out.println(reverseSentence(str5));
+        str5 = "This is a sentence";
+        System.out.println(reverseSentence(str5));
 
         System.out.println("----------------------------------------*Task-6*----------------------------------------");
         String str6 = "123Java #$%is fun";
