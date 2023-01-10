@@ -110,6 +110,12 @@ public class Homework13 {
         }
         return false;
     }
+
+    // return Arrays.asList(arr).contains(str);
+
+    // Array
+
+
     ////---------------------------------------Task-5---------------------------------------////
     public static String reverseSentence(String str){
         String[] words = str.split(" ");
@@ -131,12 +137,10 @@ public class Homework13 {
     ////---------------------------------------Task-7---------------------------------------////
     public static String[]removeArraySpecialsDigits(String[] arr){
 
-        String[] result = new String[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            String noSpecial = arr[i].replaceAll("[^a-zA-Z ]", "");
-            result[i] = noSpecial;
+             arr[i] = arr[i].replaceAll("[^a-zA-Z ]", "");
         }
-        return result;
+        return arr;
      }
 
     ////---------------------------------------Task-8---------------------------------------////
